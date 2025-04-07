@@ -1,0 +1,50 @@
+Linear mixed model fit by REML. t-tests use Satterthwaite's method ['lmerModLmerTest']
+Formula: ch4_g_day2_1v3 ~ weight + Age_in_months + het + rec + TX + UN +      VN + CV + LY + BR + CL + lactation_status + (1 | ch4_g_day2_1v3_GroupNumber) +  
+    (1 | ANI_ID)
+   Data: filtered_ewes_LW
+
+REML criterion at convergence: 38798.4
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-4.6185 -0.5167 -0.0037  0.5169  3.7238 
+
+Random effects:
+ Groups                     Name        Variance Std.Dev.
+ ANI_ID                     (Intercept)  4.535   2.129   
+ ch4_g_day2_1v3_GroupNumber (Intercept) 31.224   5.588   
+ Residual                               12.992   3.605   
+Number of obs: 6517, groups:  ANI_ID, 3801; ch4_g_day2_1v3_GroupNumber, 659
+
+Fixed effects:
+                            Estimate Std. Error         df t value Pr(>|t|)    
+(Intercept)                1.270e+01  6.608e-01  5.008e+03  19.222  < 2e-16 ***
+weight                     1.314e-01  7.261e-03  4.650e+03  18.090  < 2e-16 ***
+Age_in_months             -3.173e-02  3.485e-03  4.789e+03  -9.103  < 2e-16 ***
+het                        2.514e-01  2.463e-01  4.223e+03   1.021   0.3074    
+rec                       -2.210e-01  8.129e-01  5.058e+03  -0.272   0.7857    
+TX                        -1.918e-01  2.494e-01  2.014e+03  -0.769   0.4419    
+UN                        -1.833e+00  4.136e-01  3.218e+03  -4.431 9.69e-06 ***
+VN                         1.722e+00  1.202e+00  4.782e+03   1.432   0.1521    
+CV                        -4.413e+00  1.767e+00  1.173e+03  -2.497   0.0127 *  
+LY                        -1.511e+00  1.116e+00  5.105e+03  -1.354   0.1757    
+BR                        -2.162e+00  3.964e-01  4.481e+03  -5.453 5.20e-08 ***
+CL                         7.493e-01  5.111e-01  5.523e+03   1.466   0.1427    
+lactation_statuslactating  3.441e+00  3.654e-01  2.708e+03   9.416  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+            (Intr) weight Ag_n_m het    rec    TX     UN     VN     CV     LY     BR     CL    
+weight      -0.797                                                                             
+Age_n_mnths -0.088 -0.214                                                                      
+het         -0.187  0.013  0.143                                                               
+rec         -0.179  0.021  0.083 -0.073                                                        
+TX          -0.252  0.038 -0.018  0.032  0.023                                                 
+UN          -0.391  0.079 -0.100  0.205  0.306  0.372                                          
+VN          -0.091  0.017 -0.014 -0.002 -0.047  0.100  0.117                                   
+CV          -0.106 -0.007 -0.012  0.086  0.035  0.097  0.190  0.032                            
+LY          -0.109  0.028 -0.015 -0.063 -0.011  0.125  0.148  0.057  0.036                     
+BR          -0.326  0.045  0.042 -0.051  0.070  0.383  0.540  0.144  0.109  0.200              
+CL          -0.179  0.018  0.002 -0.006 -0.027  0.266  0.252  0.173  0.068  0.127  0.337       
+lcttn_sttsl -0.187  0.000  0.054  0.073  0.073 -0.006  0.069  0.020  0.047  0.029  0.061  0.047
